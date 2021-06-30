@@ -1,6 +1,3 @@
-// Main entry point of app
-// index.js file attaches the root React component, App.js, using React.dom and the statement document.getElementById('root').
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
