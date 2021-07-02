@@ -106,8 +106,11 @@ const PhotoList = ({ category }) => {
     <div>
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
+            // a dynamic require (ie a require in a loop like .map) returns a sorta promise which doesn't resolve immediately
+            // Hence without the .default it is still a module and not the expected data, that is why we need the .default at the end
+            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
           <img
-            src={require(`../../assets/small/${category}/${i}.jpg`)}
+          src={require(`../../assets/small/${category}/${i}.jpg`).default}
             alt={image.name}
             className="img-thumbnail mx-1"
             key={image.name}

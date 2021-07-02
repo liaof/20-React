@@ -70,6 +70,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+### Dynamic Require
+A dynamic require (ie a require in a loop like .map) returns a sorta promise which doesn't resolve immediately
+[Hence without the .default it is still a module and not the expected data, that is why we need the .default at the end]
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+
+
 ### Lesson goals
 
 - Compose a React application with components.
@@ -86,8 +92,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Introduce the concept of React Hooks.
 - Manage application state in React.
 
+- Create forms in React.
+- Develop a controlled component by using state.
+- Demonstrate conditional rendering to produce a single-page application (SPA
 
-- Packages Used 
+
+### Packages Used 
 
 - The React Testing Library, which provides functions that will help test React components, including the capacity to render components and query functions that can return DOM elements.
 
