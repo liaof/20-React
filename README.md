@@ -102,3 +102,9 @@ A dynamic require (ie a require in a loop like .map) returns a sorta promise whi
 - The React Testing Library, which provides functions that will help test React components, including the capacity to render components and query functions that can return DOM elements.
 
 - The jest-dom package, which is a library that extends Jest with custom matchers to enable inspection of various parts of the DOM.
+
+##### Single-page application
+A single-page application, or SPA, is a web application or website that interacts with the web browser by dynamically rewriting the current webpage, in place of the default method of the browser loading entirely new pages. This approach allows for a more fluid UI because the page doesn't have to be reloaded each time. React allows for conditional rendering and can replace a portion of the webpage based on the user's selection.
+
+##### Controlled Component
+validation prior to submission is possible in a controlled component because the field data is contained in the state.

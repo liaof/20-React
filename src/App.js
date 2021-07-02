@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
 import Gallery from './components/Gallery';
+import ContactForm from './components/Contact';
 
 
 
@@ -26,21 +27,40 @@ function App() {
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const [contactSelected, setContactSelected] = useState(false);// useState value of false prevents contact form from showing when the user first gets to the site
 
   return (
     <div>
       {/* The Nav component will return a single JSX element which will be the <header></header>  */}
       <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
+          categories={categories}
+          setCurrentCategory={setCurrentCategory}
+          currentCategory={currentCategory}
+          contactSelected={contactSelected}// allow the Nav componenet to modify the state in the App component
+          setContactSelected={setContactSelected}
       ></Nav>
       <main>
-        <div>
-          <Gallery currentCategory={currentCategory}>       
-        </Gallery>
-          <About></About>
-        </div>
+         {/* the following can also be written as such:
+          if(!contactSelected) {
+            <>
+              <Gallery currentCategory={currentCategory}></Gallery>
+              <About></About>
+            </> 
+          } else {
+            <ContactForm></ContactForm>
+          } */}
+        {!contactSelected ? (
+          <> 
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </> // these wraps are called React fragments; they allow
+              // multiple JSX elements to be grouped together, because you can only return one
+              // parent element in JSX converting multiple elements into the children of a single must be done
+
+              // in essense it's like wrapping elements in a <div> but we can avoid creating an extra DOM
+        ) : (
+          <ContactForm></ContactForm>
+        )}
       </main>
     </div>
   );

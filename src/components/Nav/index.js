@@ -8,8 +8,10 @@ function Nav(props) {
     categories = [],
     setCurrentCategory,
     currentCategory,
+    contactSelected,
+    setContactSelected
   } = props;
-  
+
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);// re-render the document.title each time an update/change to the currentCategory variable is made
@@ -26,28 +28,27 @@ function Nav(props) {
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a data-testid="about" href="#about">
+            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>{/*when About Me is clicked, set contactSelected = false to turn off the contact form */}
               About me
             </a>
           </li>
-          <li className="mx-2">
-            <span>Contact</span>
+          {/*the use selected Contact, add the css class 'navActive' */}
+          <li className={`mx-2 ${contactSelected && 'navActive'/*note the template literal to use JS within the JSX */}`}>
+            <span onClick={() => setContactSelected(true)}>Contact</span>{/*turn on the contact form when use clicks Contact */}
           </li>
             {/*  Whenever we .map over anything in JSX, the outermost element must have a 'key' attribute 
             that's set to be something unique. This helps React keep track of items in the virtual DOM. */}
           {categories.map((category) => (
-            <li
-              className={`mx-1 ${
-                currentCategory.name === category.name && 'navActive'
+              <li
+                className={`mx-1 ${
+                  currentCategory.name === category.name && !contactSelected && `navActive`
                 }`}
-                // if currentCategory.name == category,name, then and only then navActive will be returned 
-              key={category.name}
-            >
-              <span
-                onClick={() => {
-                  setCurrentCategory(category)
-                }}
+                  // navActive class value is assigned(true) only if Contact hasn't been selected and the current category HAS been selected.
+                key={category.name}
               >
+              <span onClick={() => {
+                setCurrentCategory(category);
+                setContactSelected(false);}}>
                 {capitalizeFirstLetter(category.name)}{/*da category namez*/}
               </span>
             </li>
