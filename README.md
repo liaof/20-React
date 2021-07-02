@@ -68,3 +68,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Lesson goals
+
+- Compose a React application with components.
+- Learn how React components are basically just functions.
+- Construct the elements of a webpage using JSX.
+- Debug errors in React.
+
+- Develop maintainable tests for a React component.
+- Formulate snapshots to compare the DOM node structures.
+- Query elements to verify visibility, content, and accessibility.
+- Explain the testing principles of the React Testing Library.
+
+- Use conditional rendering to display each page.
+- Introduce the concept of React Hooks.
+- Manage application state in React.
+
+
+- Packages Used 
+
+- The React Testing Library, which provides functions that will help test React components, including the capacity to render components and query functions that can return DOM elements.
+
+- The jest-dom package, which is a library that extends Jest with custom matchers to enable inspection of various parts of the DOM.
