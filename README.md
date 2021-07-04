@@ -114,4 +114,15 @@ A single-page application, or SPA, is a web application or website that interact
 ##### Controlled Component
 validation prior to submission is possible in a controlled component because the field data is contained in the state.
 
-Component creation and testing
+
+#### Deployment
+
+npm install -D gh-pages</br>
+</br>
+add to the package.json </br>
+</br>
+"homepage": "http://<username>.github.io/photo-port",</br>
+</br>
+and to scripts </br>
+"predeploy": "npm run build",</br>
+"deploy": "gh-pages -d build</br>
