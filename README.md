@@ -76,7 +76,7 @@ A dynamic require (ie a require in a loop like .map) returns a sorta promise whi
 (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 
 
-### Lesson goals
+### Lesson goals - Component creation and testing
 
 - Compose a React application with components.
 - Learn how React components are basically just functions.
@@ -96,6 +96,11 @@ A dynamic require (ie a require in a loop like .map) returns a sorta promise whi
 - Develop a controlled component by using state.
 - Demonstrate conditional rendering to produce a single-page application (SPA
 
+- Apply the useState Hook to conditionally render.
+- Manage the state of a modal.
+
+
+
 
 ### Packages Used 
 
@@ -108,3 +113,5 @@ A single-page application, or SPA, is a web application or website that interact
 
 ##### Controlled Component
 validation prior to submission is possible in a controlled component because the field data is contained in the state.
+
+Component creation and testing
