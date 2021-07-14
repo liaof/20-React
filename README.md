@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-#### Deployment to Github Pages
+#### [Deployment to Github Pages](https://liaof.github.io/20-React/)
 
 npm install -D gh-pages</br>
 </br>
