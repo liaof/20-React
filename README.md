@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+#### Deployment to Github Pages
+
+npm install -D gh-pages</br>
+</br>
+add to the package.json </br>
+</br>
+"homepage": "http://<username>.github.io/<reponame>",</br>
+</br>
+and to scripts </br>
+"predeploy": "npm run build",</br>
+"deploy": "gh-pages -d build</br>
 
 ## Available Scripts
 
@@ -115,14 +127,4 @@ A single-page application, or SPA, is a web application or website that interact
 validation prior to submission is possible in a controlled component because the field data is contained in the state.
 
 
-#### Deployment
 
-npm install -D gh-pages</br>
-</br>
-add to the package.json </br>
-</br>
-"homepage": "http://<username>.github.io/photo-port",</br>
-</br>
-and to scripts </br>
-"predeploy": "npm run build",</br>
-"deploy": "gh-pages -d build</br>

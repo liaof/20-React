@@ -13,6 +13,7 @@ const Modal = ({ onClose, currentPhoto }) => {// imported props from Photolist/i
                 <p>{description}</p>
                 {/* onClick={onClose} refers to this property: <Modal onClose={toggleModal} from Photolist.index.js */}
                 {/* the button will trigger onClick=>onClose=>toggleModal and set isModalOpen=false */}
+                {/* this is called a closure */}
                 <button onClick={onClose} type="button">Close this modal</button>
             </div>
         </div>
